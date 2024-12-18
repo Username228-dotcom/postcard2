@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+            }
+h1 {
+    text-align: center;
+    font-size:500%
+}
+image {
+    margin-left: 100px;
+    margin-right: 50px;
+}
+        </style>
+    </head>
+    <body>
+        <h1><span id="userName"></span>!</h1>
+        <img src="newyear2.jpg">
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get("name");
+            document.getElementById("userName").textContent = decodeURIComponent(name);
+        </script>
+    </body>
+</html>
